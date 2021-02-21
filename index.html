@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+    <style>
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="row navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <!-- Links -->
+          <ul class="navbar-nav nav-fill">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Theme 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Theme 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Theme 3</a>
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbardrop"
+                data-toggle="dropdown"
+              >
+                Theme 4
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Theme 4.1</a>
+                <a class="dropdown-item" href="#">Theme 4.2</a>
+                <a class="dropdown-item" href="#">Theme 4.3</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- -------------------------------------------------------------------------------------------------------------------- -->
+      <div id="slideshow" class="row carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+          <li data-target="#slideshow" data-slide-to="1"></li>
+          <li data-target="#slideshow" data-slide-to="2"></li>
+          <li data-target="#slideshow" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="img-fluid"
+              src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_1_lg.jpg"
+              alt="Los Angeles"
+              width="1950"
+              height="1050"
+            />
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>We had such a great time in LA!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="img-fluid"
+              src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_2_lg.jpg"
+              alt="Chicago"
+              width="1950"
+              height="1050"
+            />
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>We had such a great time in LA!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="img-fluid"
+              src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_3_lg.jpg"
+              alt="New York"
+              width="1950"
+              height="1050"
+            />
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>We had such a great time in LA!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="img-fluid"
+              src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_3_lg.jpg"
+              alt="New York"
+              width="1950"
+              height="1050"
+            />
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>We had such a great time in LA!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#slideshow" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <!-- -------------------------------------------------------------------------------------------------------------------- -->
+      <div class="row mt-3" id="row2">
+        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12">
+          <main>
+            <h1>Main Content</h1>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>Text Column 1</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nobis distinctio cumque pariatur molestias iure repudiandae
+                  nesciunt alias id ipsa! Voluptatum necessitatibus temporibus
+                  ex est. In ducimus sunt libero veniam odit!
+                </p>
+                <h3>Toggleable Tabs</h3>
+                <br />
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a href="#item1" class="nav-link active" data-toggle="tab"
+                      >Info 1</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#item2" class="nav-link" data-toggle="tab"
+                      >Info 2</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#item3" class="nav-link" data-toggle="tab"
+                      >Info 3</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div id="item1" class="container tab-pane active">
+                    <br />
+                    <h3>Item 1</h3>
+                    <p class="text-content">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam quos suscipit incidunt earum inventore numquam, quas,
+                      dolorem natus possimus, quae neque quia eligendi
+                      perferendis molestias sunt. Obcaecati illum maxime
+                      voluptate.
+                    </p>
+                  </div>
+                  <div
+                    id="item2"
+                    class="container table-responsive-xl table-responsive-lg table-responsive-md table-responsive-sm tab-pane fade"
+                  >
+                    <br />
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Column 1</th>
+                          <th>Column 2</th>
+                          <th>Column 3</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Default</td>
+                          <td>Defaultson</td>
+                          <td>def@somemail.com</td>
+                        </tr>
+                        <tr class="table-primary">
+                          <td>Primary</td>
+                          <td>Joe</td>
+                          <td>joe@example.com</td>
+                        </tr>
+                        <tr class="table-success">
+                          <td>Success</td>
+                          <td>Doe</td>
+                          <td>john@example.com</td>
+                        </tr>
+                        <tr class="table-danger">
+                          <td>Danger</td>
+                          <td>Moe</td>
+                          <td>mary@example.com</td>
+                        </tr>
+                        <tr class="table-info">
+                          <td>Info</td>
+                          <td>Dooley</td>
+                          <td>july@example.com</td>
+                        </tr>
+                        <tr class="table-warning">
+                          <td>Warning</td>
+                          <td>Refs</td>
+                          <td>bo@example.com</td>
+                        </tr>
+                        <tr class="table-active">
+                          <td>Active</td>
+                          <td>Activeson</td>
+                          <td>act@example.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="item3" class="container tab-pane fade">
+                    <br />
+                    <h3>Item 3</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nam quos suscipit incidunt earum inventore numquam, quas,
+                      dolorem natus possimus, quae neque quia eligendi
+                      perferendis molestias sunt. Obcaecati illum maxime
+                      voluptate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>Text Column 2</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Nobis distinctio cumque pariatur molestias iure repudiandae
+                  nesciunt alias id ipsa! Voluptatum necessitatibus temporibus
+                  ex est. In ducimus sunt libero veniam odit!
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="bottom"
+                  data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus."
+                >
+                  Popover on bottom
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
+
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12">
+          <aside>
+            <h3>Sidebar</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate accusamus aliquid, ipsa illum omnis dolor nesciunt
+              doloremque nulla quaerat ullam mollitia maiores labore assumenda
+              error nisi itaque! Quaerat, error et.
+            </p>
+          </aside>
+        </div>
+      </div>
+      <!-- -------------------------------------------------------------------------------------------------------------------- -->
+      <div class="row mt-3" id="row3">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_1_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_2_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_3_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 3</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_1_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 4</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_2_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 5</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <img
+                class="img-fluid"
+                src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_3_sm.jpg"
+                alt="Los Angeles"
+                width="250"
+                height="250"
+              />
+              <h5 class="card-title">Matterhorn 6</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------------------------------------------------------------------------------------------------------- -->
+      <div class="row mt-3" id="row4">
+        <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+          <img
+            class="img-fluid rounded-circle mx-auto d-block"
+            src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_1_sm.jpg"
+            alt="Los Angeles"
+            data-toggle="collapse"
+            data-target="#image1"
+            width="350"
+            height="350"
+          />
+          <!--  -->
+          <div id="image1" class="collapse text-center">
+            <h4>Matterhorn 1</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              optio magni, quasi aperiam porro tempore. Quisquam illo laudantium
+              quaerat sit vel sequi quia repudiandae, molestias fugiat debitis
+              ipsam ab aspernatur!
+            </p>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+          <img
+            class="img-fluid rounded-circle mx-auto d-block"
+            src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_2_sm.jpg"
+            alt="Los Angeles"
+            data-toggle="collapse"
+            data-target="#image2"
+            width="350"
+            height="350"
+          />
+          <!--  -->
+          <div id="image2" class="collapse text-center">
+            <h4>Matterhorn 2</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              optio magni, quasi aperiam porro tempore. Quisquam illo laudantium
+              quaerat sit vel sequi quia repudiandae, molestias fugiat debitis
+              ipsam ab aspernatur!
+            </p>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+          <img
+            class="img-fluid rounded-circle mx-auto d-block"
+            src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_3_sm.jpg"
+            alt="Los Angeles"
+            data-toggle="collapse"
+            data-target="#image3"
+            width="350"
+            height="350"
+          />
+          <!--  -->
+          <div id="image3" class="collapse text-center">
+            <h4>Matterhorn 3</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              optio magni, quasi aperiam porro tempore. Quisquam illo laudantium
+              quaerat sit vel sequi quia repudiandae, molestias fugiat debitis
+              ipsam ab aspernatur!
+            </p>
+          </div>
+          <!--  -->
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12">
+          <img
+            class="img-fluid rounded-circle mx-auto d-block"
+            src="http://aspoerri.comminfo.rutgers.edu/Teaching/WebProg/demos/ex3/images/Matterhorn_4_sm.jpg"
+            alt="Los Angeles"
+            data-toggle="collapse"
+            data-target="#image4"
+            width="350"
+            height="350"
+          />
+          <!--  -->
+          <div id="image4" class="collapse text-center">
+            <h4>Matterhorn 4</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              optio magni, quasi aperiam porro tempore. Quisquam illo laudantium
+              quaerat sit vel sequi quia repudiandae, molestias fugiat debitis
+              ipsam ab aspernatur!
+            </p>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
